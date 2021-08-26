@@ -1,4 +1,4 @@
-﻿namespace user
+﻿namespace Severi.user
 {
     public interface IUser
     {

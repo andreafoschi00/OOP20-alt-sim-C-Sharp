@@ -1,4 +1,4 @@
-﻿namespace user.builder
+namespace Severi.user.builder
 {
     public class UserBuilder : IUserBuilder
     {

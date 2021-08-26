@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="src\common" />
+      <Folder Include="src\user\builder" />
+      <Folder Include="src\user\records" />
+    </ItemGroup>
+
+</Project>

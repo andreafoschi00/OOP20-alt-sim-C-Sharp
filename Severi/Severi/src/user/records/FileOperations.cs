@@ -8,7 +8,7 @@ namespace Severi.user.records
     public class FileOperations
     {
         
-        public static Dictionary<string, int> Users { get; private set; } = new();
+        public static Dictionary<string, int> Users { get; private set; } = new ();
         
         /// <summary>
         /// Creates directory by given path.

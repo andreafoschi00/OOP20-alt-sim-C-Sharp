@@ -5,7 +5,7 @@ using Severi.user.validation;
 
 namespace Severi.user.records
 {
-    public static class FileOperations
+    public class FileOperations
     {
         
         public static Dictionary<string, int> Users { get; private set; } = new();
@@ -38,7 +38,7 @@ namespace Severi.user.records
         /// Loads file by path.
         /// </summary>
         /// <param name="file">to load</param>
-        private static void LoadFile(in string file)
+        protected static void LoadFile(in string file)
         {
             new RecordsValidation().UserRecordsFileValidation();
             var jsonString = File.ReadAllText(file);
@@ -49,7 +49,7 @@ namespace Severi.user.records
         /// Updates file by path.
         /// </summary>
         /// <param name="file">to update</param>
-        private static void UpdateFile(in string file)
+        protected static void UpdateFile(in string file)
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
             var jsonString = JsonSerializer.Serialize(Users, options);
@@ -61,7 +61,7 @@ namespace Severi.user.records
         /// Add user to file.
         /// </summary>
         /// <param name="user">to add</param>
-        public static void AddUser(in IUser user)
+        public virtual void AddUser(in IUser user)
         {
             LoadFile(RecordsFolder.UserRecordsFilePath);
             if (!Users.ContainsKey(user.Name.Trim()))
@@ -72,14 +72,23 @@ namespace Severi.user.records
         }
 
         /// <summary>
-        /// Checks if given is already taken.
+        /// Checks if given name is already taken.
         /// </summary>
         /// <param name="name">to check</param>
         /// <returns>true if taken</returns>
-        public static bool IsTaken(in string name)
+        public virtual bool IsTaken(in string name)
         {
             LoadFile(RecordsFolder.UserRecordsFilePath);
             return Users.ContainsKey(name);
         }
+
+        /// <summary>
+        /// Clears user records file content.
+        /// </summary>
+		public virtual void ClearRecordsFile()
+		{
+			Users.Clear();
+            UpdateFile(RecordsFolder.UserRecordsFilePath);
+		}
     }
 }

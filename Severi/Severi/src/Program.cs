@@ -14,6 +14,7 @@ namespace Severi
         {
             new RecordsValidation().UserRecordsFileValidation();
             var nameQuality = new NameQuality();
+            var fileOperations = new FileOperations();
 
             while (true)
             {
@@ -32,7 +33,7 @@ namespace Severi
                 Console.WriteLine("Building user by entered name...");
                 Console.WriteLine("Generating random score to assign to user...");
                 var score = Score.GenerateRandomScore();
-                FileOperations.AddUser(UserBuilder.BuildUser(name, score));
+                fileOperations.AddUser(UserBuilder.BuildUser(name, score));
                 Thread.Sleep(1500);
                 Console.WriteLine("User built!\n");
                 Console.WriteLine("LEADERBOARD:");

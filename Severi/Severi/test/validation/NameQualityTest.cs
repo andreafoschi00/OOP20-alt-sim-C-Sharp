@@ -1,9 +1,8 @@
 ﻿using Severi.user.builder;
-using Severi.user.records;
 using Severi.user.validation;
 using Xunit;
 
-namespace Severi.test
+namespace Severi.test.validation
 {
     public class NameQualityTest : NameQuality
     {

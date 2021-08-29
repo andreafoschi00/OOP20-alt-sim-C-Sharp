@@ -1,7 +1,6 @@
-﻿using System.Text.RegularExpressions;
-using Severi.user.validation;
+﻿using Severi.user.validation;
 
-namespace Severi.test
+namespace Severi.test.validation
 {
     public class NameChecker : NameQuality
     {

@@ -1,9 +1,8 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using Severi.user;
 using Severi.user.records;
 
-namespace Severi.test
+namespace Severi.test.validation
 {
     public class FileOperationsTest : FileOperations
     {

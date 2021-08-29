@@ -7,9 +7,8 @@ namespace Severi.user.records
 {
     public class FileOperations
     {
-        
-        public static Dictionary<string, int> Users { get; private set; } = new ();
-        
+        public static Dictionary<string, int> Users { get; private set; } = new();
+
         /// <summary>
         /// Creates directory by given path.
         /// </summary>
@@ -44,7 +43,7 @@ namespace Severi.user.records
             var jsonString = File.ReadAllText(file);
             Users = JsonSerializer.Deserialize<Dictionary<string, int>>(jsonString) ?? new Dictionary<string, int>();
         }
-        
+
         /// <summary>
         /// Updates file by path.
         /// </summary>
@@ -68,6 +67,7 @@ namespace Severi.user.records
             {
                 Users.Add(user.Name.Trim(), user.Score);
             }
+
             UpdateFile(RecordsFolder.UserRecordsFilePath);
         }
 
@@ -85,10 +85,10 @@ namespace Severi.user.records
         /// <summary>
         /// Clears user records file content.
         /// </summary>
-		public virtual void ClearRecordsFile()
-		{
-			Users.Clear();
+        public virtual void ClearRecordsFile()
+        {
+            Users.Clear();
             UpdateFile(RecordsFolder.UserRecordsFilePath);
-		}
+        }
     }
 }

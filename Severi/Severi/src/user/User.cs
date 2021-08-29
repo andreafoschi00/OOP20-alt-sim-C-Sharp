@@ -2,19 +2,18 @@ namespace Severi.user
 {
     public class User : IUser
     {
-
         public User(in string name, in int score)
         {
             Name = name;
             Score = score;
         }
-        
+
         /// <inheritdoc />
         public string Name { get; }
-        
+
         /// <inheritdoc />
         public int Score { get; set; }
-        
+
         /// <inheritdoc />
         public void ResetScore()
         {

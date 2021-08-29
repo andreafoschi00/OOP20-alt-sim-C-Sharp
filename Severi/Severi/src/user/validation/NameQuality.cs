@@ -6,11 +6,11 @@ namespace Severi.user.validation
     public class NameQuality
     {
         private const string Pattern = "^[A-Za-z0-9]{1,12}$";
-        protected Regex Rgx { get; } = new (Pattern);
+        protected Regex Rgx { get; } = new(Pattern);
         private const int MaxLength = 12;
 
-        private readonly FileOperations _fileOperations = new ();
-        
+        private readonly FileOperations _fileOperations = new();
+
         /// <summary>
         /// Checks name quality based on regex.
         /// </summary>
@@ -18,7 +18,7 @@ namespace Severi.user.validation
         /// <returns>name-result enum value</returns>
         public NameResult CheckName(in string name)
         {
-            if (string.IsNullOrEmpty(name) 
+            if (string.IsNullOrEmpty(name)
                 || string.IsNullOrWhiteSpace(name))
             {
                 return NameResult.Empty;
@@ -33,7 +33,7 @@ namespace Severi.user.validation
             {
                 return NameResult.Taken;
             }
-            
+
             return Rgx.Match(name).Success ? NameResult.Correct : NameResult.Wrong;
         }
     }

@@ -37,6 +37,7 @@ namespace Severi.test
             {
                 Users.Add(user.Name.Trim(), user.Score);
             }
+
             UpdateFile(RecordsFolder.UserRecordsFilePath + ".copy");
         }
 

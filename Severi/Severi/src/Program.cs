@@ -26,9 +26,10 @@ namespace Severi
                 {
                     Console.WriteLine("Name is already taken!");
                     continue;
-                } 
+                }
+
                 if (!nameQuality.CheckName(name).Equals(NameResult.Correct)) continue;
-                
+
                 Console.WriteLine("Name passes regex checks!\n");
                 Console.WriteLine("Building user by entered name...");
                 Console.WriteLine("Generating random score to assign to user...");
@@ -38,7 +39,7 @@ namespace Severi
                 Console.WriteLine("User built!\n");
                 Console.WriteLine("LEADERBOARD:");
                 Leaderboard.PrintLeaderboard();
-                
+
                 break;
             }
         }

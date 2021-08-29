@@ -8,7 +8,7 @@ namespace Severi.user.builder
         /// <param name="name"> of the user</param>
         /// <returns>builder</returns>
         IUserBuilder Name(in string name);
-        
+
         /// <summary>
         /// Adds score to user at building.
         /// </summary>

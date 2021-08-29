@@ -7,8 +7,8 @@ namespace Severi.test
     {
         private const int MaxLength = 12;
 
-        private readonly FileOperationsTest _fileOperations = new ();
-        
+        private readonly FileOperationsTest _fileOperations = new();
+
         public new NameResult CheckName(in string name)
         {
             if (string.IsNullOrEmpty(name)
@@ -26,7 +26,7 @@ namespace Severi.test
             {
                 return NameResult.Taken;
             }
-            
+
             return Rgx.Match(name).Success ? NameResult.Correct : NameResult.Wrong;
         }
     }

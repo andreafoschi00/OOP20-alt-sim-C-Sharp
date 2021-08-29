@@ -11,7 +11,7 @@ namespace Severi.user.score
             var steps = Math.Floor(score / 100.0);
             var adjustedScore = steps * 100.0;
 
-            return (int) adjustedScore;
+            return (int)adjustedScore;
         }
     }
 }

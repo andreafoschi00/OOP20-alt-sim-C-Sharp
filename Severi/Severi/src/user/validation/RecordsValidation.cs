@@ -28,7 +28,7 @@ namespace Severi.user.validation
         {
             FileOperations.CreateDirectory(RecordsFolder.RecordsDirectoryPath);
         }
-        
+
         private void ValidateFile()
         {
             UserRecordsDirValidation();
@@ -38,7 +38,8 @@ namespace Severi.user.validation
         /// <summary>
         /// Validates users file existence.
         /// </summary>
-        public void UserRecordsFileValidation() {
+        public void UserRecordsFileValidation()
+        {
             ValidateFile();
         }
     }

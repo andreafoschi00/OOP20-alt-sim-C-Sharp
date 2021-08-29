@@ -10,7 +10,7 @@ namespace Severi.common
     {
         /// Gets OS file separator.
         public static readonly char Separator = Path.DirectorySeparatorChar;
-        
+
         /// <summary>
         /// Gets user home directory.
         /// </summary>

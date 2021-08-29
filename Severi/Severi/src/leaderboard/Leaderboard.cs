@@ -28,6 +28,5 @@ namespace Severi.leaderboard
         {
             TopFiveUsers().Select(i => $"- {i.Key}: {i.Value}").ToList().ForEach(Console.WriteLine);
         }
-        
     }
 }

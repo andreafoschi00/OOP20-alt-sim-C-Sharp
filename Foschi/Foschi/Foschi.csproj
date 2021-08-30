@@ -39,6 +39,12 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="src\airstrip\AirStrip.cs" />
+        <Compile Include="src\airstrip\AirStripStatus.cs" />
+        <Compile Include="src\airstrip\BasicAirStrip.cs" />
+        <Compile Include="src\airstrip\HelipadAirStrip.cs" />
+        <Compile Include="src\airstrip\IAirStrip.cs" />
+        <Compile Include="src\Program.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Severi.user;
+using Severi.user.builder;
 using Xunit;
 
 namespace Severi.test.leaderboard
@@ -10,11 +11,11 @@ namespace Severi.test.leaderboard
         private readonly Dictionary<string, int> _users = new();
 
         private const int TopFive = 5;
-        private readonly IUser _user1 = new User("luca", 100);
-        private readonly IUser _user2 = new User("paolo", 200);
-        private readonly IUser _user3 = new User("giacomo", 300);
-        private readonly IUser _user4 = new User("gianni", 400);
-        private readonly IUser _user5 = new User("gigi", 500);
+        private readonly IUser _user1 = UserBuilder.BuildUser("luca", 100);
+        private readonly IUser _user2 = UserBuilder.BuildUser("paolo", 200);
+        private readonly IUser _user3 = UserBuilder.BuildUser("giacomo", 300);
+        private readonly IUser _user4 = UserBuilder.BuildUser("gianni", 400);
+        private readonly IUser _user5 = UserBuilder.BuildUser("gigi", 500);
 
         public LeaderboardTest()
         {

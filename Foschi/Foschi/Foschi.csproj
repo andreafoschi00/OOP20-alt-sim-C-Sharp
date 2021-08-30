@@ -36,6 +36,18 @@
         <Reference Include="System.Core" />
         <Reference Include="System.Data" />
         <Reference Include="System.Xml" />
+        <Reference Include="xunit, Version=1.9.2.1705, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c">
+          <HintPath>..\packages\xunit.1.9.2\lib\net20\xunit.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="XUnit.V8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\packages\XUnit.V8.1.0.0.0\lib\net40\XUnit.V8.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="xUnit.V8.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\packages\XUnit.V8.1.0.0.0\lib\net40\xUnit.V8.Contracts.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Properties\AssemblyInfo.cs" />
@@ -45,6 +57,21 @@
         <Compile Include="src\airstrip\HelipadAirStrip.cs" />
         <Compile Include="src\airstrip\IAirStrip.cs" />
         <Compile Include="src\Program.cs" />
+        <Compile Include="test\airstrip\AirStripManagementTest.cs" />
+        <Compile Include="test\airstrip\AirStripScoreTest.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Include="packages.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="x64\msvcp100.dll" />
+      <Content Include="x64\msvcr100.dll" />
+      <Content Include="x64\Noesis.Javascript.dll" />
+      <Content Include="x64\xUnit.V8.Noesis.Proxy.x64.dll" />
+      <Content Include="x86\msvcp100.dll" />
+      <Content Include="x86\msvcr100.dll" />
+      <Content Include="x86\Noesis.Javascript.dll" />
+      <Content Include="x86\xUnit.V8.Noesis.Proxy.x86.dll" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
